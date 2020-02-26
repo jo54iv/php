@@ -1,0 +1,30 @@
+<?php
+  $lake_yeak = 2103942;
+  $myanmar = 19092;
+  $bergen = 109;
+  $albania = 9094;
+echo "At this point we have $lake_yeak and $myanmar and $bergen and $albania.";
+
+  $lake_yeak_us = 0.00026;
+  $myanmar_us = 0.00066;
+  $bergen_us = 0.11;
+  $albania_us = 0.0090;
+  
+  $us_lake_yeak = $lake_yeak * $lake_yeak_us;
+
+echo "\nYour $lake_yeak Riel were exchanged for $us_lake_yeak.";
+  
+$us_myanmar = $myanmar * $myanmar_us;
+
+echo "\nYour $myanmar Kyat were exchanged for $us_myanmar.";
+  
+$us_bergen = $bergen * $bergen_us;
+
+echo "\nYour $bergen Krones were exchanged for $us_bergen.";
+  
+$us_albania = $albania * $albania_us;
+
+echo "\nYour $albania Lek were exchanged for $us_albania.";
+
+$final_amount = $us_lake_yeak + $us_myanmar + $us_bergen + $us_albania - 4;
+echo "\nAfer deducting the transactions fees, you'll be recieving $final_amount usd.";
