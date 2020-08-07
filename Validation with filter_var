@@ -23,4 +23,4 @@ Your Favorite Website:
 <br>
 <input type="submit" value="Submit">
 </form>
-<p> 
+<p> <?= $form_message;?> </p> 
