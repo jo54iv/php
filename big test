@@ -1,0 +1,30 @@
+<?php
+$int_ns = array (
+     array( "season" => 1, "p" => [2,-3,3]),
+     array( "season" => 2, "p" => [1,10,8]),
+     array( "season" => 3, "p" => [2,5,13]),
+     array( "season" => 4, "p" => [-5,3,-18])
+);
+
+?>
+<?php
+function maxSeasonalAmplitude($array, $keyToSearch){
+{
+    $currentMax = NULL;
+    foreach($int_ns as $dt)
+    {
+        foreach($dt as $key => $value)
+        {
+            if ($key == $keyToSearch && ($value >= $currentMax))
+            {
+                $currentMax = $value;
+            }
+        }
+    }
+
+    return $currentMax;
+}
+
+$value = maxSesonalAmplitude($int_ns, "p");
+
+/?>
